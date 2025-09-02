@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { lusitana } from "@/app/ui/fonts";
 import {
 	AtSymbolIcon,

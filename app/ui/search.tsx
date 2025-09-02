@@ -11,7 +11,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
 	const handleSearch = useDebouncedCallback((term: string): void => {
 		const prams = new URLSearchParams(searchPrams);
-		prams.set("page", "1");
+		placeholder === "Search invoices..." && prams.set("page", "1");
 		if (term) {
 			prams.set("query", term);
 		} else {

@@ -7,14 +7,14 @@ import { InvoicesTableSkeleton } from "@/app/ui/skeletons";
 import { Suspense } from "react";
 import { fetchInvoicesPages } from "@/app/lib/data";
 
-type props = {
+type Props = {
 	searchParams?: Promise<{
 		query?: string;
 		page?: string;
 	}>;
 };
 
-export default async function Page(prop: props) {
+export default async function Page(prop: Props) {
 	const searchParams = await prop.searchParams;
 	const query = searchParams?.query || "";
 	const currentPage = Number(searchParams?.page) || 1;
